@@ -57,9 +57,9 @@ public class MainActivity extends AppCompatActivity {
                     .build();
         }
 
-        CommitApiService movieApiService = retrofit.create(CommitApiService.class);
+        CommitApiService commitApiService = retrofit.create(CommitApiService.class);
 
-        Call<ItemResponse> call = movieApiService.getReposCommits(HEADER_AUTH,REPO_PATH);
+        Call<ItemResponse> call = commitApiService.getReposCommits(HEADER_AUTH,REPO_PATH);
 
         call.enqueue(new Callback<ItemResponse>() {
             @Override
